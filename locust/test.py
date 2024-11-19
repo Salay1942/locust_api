@@ -17,6 +17,6 @@ class UserBehavior(TaskSet):
             #headers = {"Authorization": f"Bearer {self.token}"}
             self.client.get("/api/category")
 
-class WebsiteUser(HttpUser):
+class WebsiteUser(HttpUser): 
     tasks = [UserBehavior]
     wait_time = between(1, 5)  # Simulate user wait time between requests
